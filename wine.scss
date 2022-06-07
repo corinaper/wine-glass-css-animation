@@ -1,0 +1,135 @@
+body{
+    background:rgb(255, 103, 28);
+  }
+  
+  .container {
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    animation: glass 2.5s linear infinite;
+  }
+  
+  .images {
+    display:grid;
+    margin-top:55px;
+  }
+  
+  .image, .image2 {
+    grid-area: 1 / 1;
+    width: 100px;
+    height: 29px;
+    margin-left: 9%;
+    background-image: url("https://i.ibb.co/8xhM8Hn/wave-removebg-preview.png");
+  }
+  
+  .image {
+      animation: wave 2.5s linear alternate infinite;
+    filter:blur(0.5px);
+  }
+  
+  .image2 {
+     opacity:0.8;
+      animation: wave2 2.5s linear alternate infinite;
+    filter:blur(0.5px);
+    margin-top:-5px;
+  }
+  
+  .wine{
+    position:relative;
+    width: 100px;
+    height:80px;
+    margin-top:-10%;
+    margin-left: 9%;
+    display:grid;
+    justify-content:center;
+  background: linear-gradient(0deg, rgba(255, 103, 28,0.9) 0%, rgba(33, 33, 33,1) 30%);
+    border-bottom-left-radius: 50%;
+    border-bottom-right-radius: 50%;
+    border-top-left-radius: 0%;
+    border-top-right-radius: 0%;
+    
+  }
+  
+  
+  @keyframes glass {
+    0%,100% {
+      transform:rotate(0deg)
+    }
+    
+    50% {
+      transform:rotate(10deg)
+    }
+  }
+  
+  @keyframes wave{
+    0% {
+      background-position: 0% 0%;
+    }
+  
+    50% {
+      background-position: -1000% 0%;
+    }
+    100% {
+      background-position: 0% 0%;
+    }
+  }
+  
+  @keyframes wave2{
+    0% {
+      background-position: 0% 0%;
+    }
+  
+    50% {
+      background-position: 1000% 0%;
+    }
+    100% {
+      background-position: 0% 0%;
+    }
+  }
+  
+  @keyframes swell {
+    0%, 100% {
+      transform: translate3d(0,-3px,0);
+    }
+    50% {
+      transform: translate3d(0,5px,0);
+    }
+  }
+  
+  
+  .top-glass{
+  /*   position:absolute; */
+    width:120px;
+    height:160px;
+    background:rgb(235, 233, 232);
+    margin-top:15%;
+     border-bottom-left-radius: 40%;
+    border-bottom-right-radius: 40%;
+    z-index:-1;
+  }
+  
+  .glass-circle {
+    position:absolute;
+    width:119px;
+    height:30px;
+    background:rgb(255, 103, 28);
+    border-radius:100%;
+    border:1px solid rgb(235, 233, 232);
+    margin-top:-15px;
+  }
+  
+  .foot{
+  /*   position:absolute; */
+    width:13px;
+    height:130px;
+    background:rgb(235, 233, 232);
+    
+  }
+  .bottom {
+    position:relative;
+    width:130px;
+    height:13px;
+    border-radius:100%;
+    background:rgb(235, 233, 232);
+   
+  }
